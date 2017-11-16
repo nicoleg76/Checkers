@@ -4,7 +4,16 @@
 #define WHITE 'O'
 #define BLACK_KING 'k'
 #define WHITE_KING 'K'
+#include <string>
 
+class Pos{
+	int i;
+	int j;
+    Pos(int _i, int _j){
+		i = _i;
+		j = _j;
+	}
+};
 
 inline isWhite(char w){
 	return w <= 90;
@@ -22,21 +31,41 @@ class CBoard {
 	/**
 	 * @brief counts amount of white pieces on board
 	 */
-	void countWhite();
+	int countWhite();
 	
 	/**
 	 * @brief counts amount of black pieces on board
 	 */
-	void countBlack();
+	int countBlack();
 	
 	/**
 	 * @brief initial set up of board
 	 */
 	void setUp();
 	
+	/**
+	 * @brief checks if square at position given is empty
+	 */
+	bool squareIsEmpty(Pos pos);
 	
 	/**
-	 * @brief checks if each square is empty
+	 * @brief moves piece to selected spot
 	 */
-	void squareEmpty();
+	void movePiece(Pos positionFrom, Pos positionTo);
+	
+	/**
+	 * @brief go through all pieces and check if they should be made kings or not
+	 */
+	void checkMakeKing();
+	
+	/**
+	 * @brief empties selected square
+	 */
+	void emptySquare();
+	
+	bool squareIsWhite(Pos pos);
+	
+	bool squareIsBlack(Pos pos);
+	
+	std::string toString();
 };
