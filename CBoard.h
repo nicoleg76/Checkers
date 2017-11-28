@@ -1,10 +1,13 @@
+#include <string>
+
 #pragma once
 #define SPACE ' '
 #define BLACK 'o'
 #define WHITE 'O'
 #define BLACK_KING 'k'
 #define WHITE_KING 'K'
-#include <string>
+
+#define BOARD_SIZE 8
 
 class Pos{
 	int i;

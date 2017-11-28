@@ -5,8 +5,8 @@
 void CBoard::Clear(){
 	int i;
 	int j;
-	for (i = 0; i <= 8; i++){
-		for (j = 0; j <= 8; j++){
+	for (i = 0; i < 8; i++){
+		for (j = 0; j < 8; j++){
 			m_aBoard[i][j] = SPACE;
 		}
 	}
@@ -16,8 +16,8 @@ int CBoard::countWhite(){
 	int i;
 	int j;
 	int countW;
-	for (i = 0; i <= 8; i++){
-		for (j = 0; j <= 8; j++){
+	for (i = 0; i < 8; i++){
+		for (j = 0; j < 8; j++){
 			if (m_aBoard[i][j] = WHITE){
 				countW ++;
 			}
@@ -31,8 +31,8 @@ int CBoard::countBlack(){
 	int i;
 	int j;
 	int countB;
-	for (i = 0; i <= 8; i++){
-		for (j = 0; j <= 8; j++){
+	for (i = 0; i < 8; i++){
+		for (j = 0; j < 8; j++){
 			if (m_aBoard[i][j] = BLACK){
 				countB ++;
 			}
